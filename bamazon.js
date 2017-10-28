@@ -2,10 +2,7 @@ var mysql = require("mysql");
 
 var inquirer = require("inquirer");
 
-var product;
-var price;
-var quantity;
-var stock;
+var product, price, quantity, stock;
 var items = [];
 var productArray = [];
 
