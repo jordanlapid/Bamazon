@@ -16,9 +16,14 @@
 
 ![alt text](https://github.com/jordanlapid/Bamazon/blob/master/images/4.PNG?raw=true "Verification")
 
+![alt text](https://github.com/jordanlapid/Bamazon/blob/master/images/5.PNG?raw=true "Verification")
 
 ## Successful Checkout
 * If the order can be fulfilled, the product name, unit price, quantity and total price will be displayed.  
-* The MySQL database will be updated based on the quantity ordered.
+
 
 ![alt text](https://github.com/jordanlapid/Bamazon/blob/master/images/3.PNG?raw=true "Checkout")
+
+* The MySQL database will be updated based on the quantity ordered and the data in the database will persist when the program is run again.
+
+![alt text](https://github.com/jordanlapid/Bamazon/blob/master/images/6.PNG?raw=true "Checkout")
