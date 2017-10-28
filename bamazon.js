@@ -24,7 +24,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
   if (err) throw err;
-  console.log("Connected to Bamazon." + "\n");
+  console.log("Welcome to Bamazon!" + "\n");
   startBamazon();
 });
 
@@ -57,9 +57,11 @@ function listItems(results){
         product = productArray[1];
         price = productArray[3];
         stock = parseInt(productArray[4]);
-        quantity = answer.quantity;
+        quantity = parseInt(answer.quantity);
 
-        if(quantity > stock){
+        if(quantity === 0 || quantity < 1){
+        	console.log("Please enter a quantity greater than 0.")
+        } else if (quantity > stock) {
         	console.log("Insufficient Stock!")
         } else {
         	checkOut(price,quantity);
@@ -68,7 +70,6 @@ function listItems(results){
 	});
 
 }
-
 
 function checkOut(price, quantity){
 	console.log("\n" + "\n" + "Product: " + product + "\n" + "Price: " + price + "\n" + "Quantity: " + quantity + "\n" + "Total Price: " + price * quantity + "\n" + "\n" );
@@ -85,7 +86,7 @@ function checkOut(price, quantity){
 		],
 		function(error) {
 		if (error) throw err;
-		console.log("Database has been updated!");
+		console.log("Thank you. Come Again!");
 		}
     );
 }
